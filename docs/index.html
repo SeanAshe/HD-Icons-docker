@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小迪的图标库</title>
+    <meta name="description" content="在线浏览、搜索并复制 HD-Icons 高清图标地址。">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="css/xdtx.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="p-6 day-mode">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+    <div class="flex items-center space-x-4">
+        <a href="https://github.com/xushier/HD-Icons" target="_blank" rel="noopener" class="text-gray-700 hover:text-purple-600" title="HD-Icons">
+            <i class="fab fa-github text-xl"></i>
+        </a>
+        <a href="https://github.com/SeanAshe/HD-Icons-docker" target="_blank" rel="noopener" class="text-gray-700 hover:text-purple-600" title="本站仓库">
+            <i class="fas fa-cube text-xl"></i>
+        </a>
+        <a href="https://space.bilibili.com/32313260" target="_blank" rel="noopener" class="text-gray-700 hover:text-purple-600">
+            <i class="fab fa-bilibili text-xl"></i>
+        </a>
+        <a href="https://www.youtube.com/@xiaoditx" target="_blank" rel="noopener" class="text-gray-700 hover:text-purple-600">
+            <i class="fab fa-youtube text-xl"></i>
+        </a>
+    </div>
+
+    <div class="flex space-x-4">
+        <button id="toggle-mode" class="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500" type="button">
+            <i class="fas fa-moon"></i>
+            <span class="hidden md:inline">夜间模式</span>
+        </button>
+        <button id="check-update" class="p-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500" type="button">
+            <i class="fas fa-sync"></i>
+            <span class="hidden md:inline">检查更新</span>
+        </button>
+    </div>
+    </div>
+
+    <div class="text-center mb-6">
+        <h1 class="text-4xl sm:text-5xl font-bold">
+            <a href="./">小迪的图标库</a>
+        </h1>
+        <p class="text-xl intro-text mt-2 font-bold">单击复制图标地址</p>
+    </div>
+
+    <div class="flex items-center justify-center space-x-4 mb-6">
+        <input type="text" id="search" placeholder="输入关键词，回车搜索" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 search-input font-bold" style="padding: 0.3rem 0.8rem !important; border-radius: 1rem !important;">
+        <button id="search-button" class="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500" type="button">
+            <i class="fas fa-search"></i>
+            <span class="hidden md:inline">搜索</span>
+        </button>
+    </div>
+
+    <div class="flex items-center justify-center space-x-4 mb-4">
+        <button id="btn-all" class="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 category-button" type="button" data-type="all">
+            <i class="fas fa-grip-lines"></i>
+            <span class="hidden md:inline">所有</span>
+        </button>
+        <button id="btn-border-radius" class="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 category-button" type="button" data-type="border-radius">
+            <i class="fas fa-square"></i>
+            <span class="hidden md:inline">圆角</span>
+        </button>
+        <button id="btn-circle" class="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 category-button" type="button" data-type="circle">
+            <i class="fas fa-circle"></i>
+            <span class="hidden md:inline">圆形</span>
+        </button>
+        <button id="btn-svg" class="p-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 category-button" type="button" data-type="svg">
+            <i class="fas fa-bezier-curve"></i>
+            <span class="hidden md:inline">矢量</span>
+        </button>
+    </div>
+
+    <div class="border-b border-gray-400 mb-3"></div>
+    <div id="status" class="flex flex-wrap items-center justify-center mb-3"></div>
+    <div id="image-container" class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-10 gap-2">
+        <div id="loading-spinner" class="col-span-full flex justify-center items-center">
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <div class="border-b border-gray-400 mt-8"></div>
+    <footer class="text-center py-4 mt-8 text-sm text-gray-600" style="background-color: inherit;">
+        Copyright © 2025 Powered By 小迪同学 All Rights Reserved.
+        <div class="mt-2">在线浏览版。上传图标和自动同步请使用本仓库的 Docker 版。</div>
+    </footer>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
